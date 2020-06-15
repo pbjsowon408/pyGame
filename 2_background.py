@@ -20,8 +20,8 @@ while running:
         if event.type == pygame.QUIT:  # Close Screen event is occured
             running = False  # Game not running
 
-    screen.blit(background, (0,0)) # paint background
+    screen.blit(background, (0, 0))  # paint background
 
-    pygame.display.update() # game background paint again
+    pygame.display.update()  # game background paint again
 # pygame quit
 pygame.quit()
