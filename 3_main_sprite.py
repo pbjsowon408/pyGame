@@ -14,13 +14,14 @@ pygame.display.set_caption("Python Game")  # Game title
 background = pygame.image.load("file location")
 
 # get character img
-character = pygame.image.load("file location")
-character_size = character.get_rect().size # get image size 
-character_width = character_size[0] #character width size
-character_height = character_size[1] # character height size
-character_x_pos = (screen_width / 2) - (character_width / 2) # set character width location in the middle of the screen
-character_y_pos - screen_height - character_height# set character height location in the botton of the screen
-
+character = pygame.image.load("C:/Programmings/pyGame/background.png")
+character_size = character.get_rect().size  # get image size
+character_width = character_size[0]  # character width size
+character_height = character_size[1]  # character height size
+# set character width location in the middle of the screen
+character_x_pos = (screen_width / 2) - (character_width / 2)
+# set character height location in the botton of the screen
+character_y_pos = screen_height - character_height
 
 
 # event Loop
@@ -30,10 +31,11 @@ while running:
         if event.type == pygame.QUIT:  # Close Screen event is occured
             running = False  # Game not running
 
-    screen.blit(background, (0,0)) # paint background
+    screen.blit(background, (0, 0))  # paint background
 
-    screen.blit(character, (character_x_pos, character_y_pos)) # create character
+    # create character
+    screen.blit(character, (character_x_pos, character_y_pos))
 
-    pygame.display.update() # game background paint again
+    pygame.display.update()  # game background paint again
 # pygame quit
 pygame.quit()
